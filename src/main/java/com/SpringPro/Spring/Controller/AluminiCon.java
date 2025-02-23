@@ -15,24 +15,7 @@ public class AluminiCon {
     @Autowired
     AluminiSer ser;
 
-    @GetMapping("/alumini2")
-    public String showAlumini(@RequestParam String name, Model model) {
-        List<Alumini> list=ser.getAllUser(name);
-        model.addAttribute("all",list);
-        return "al1";
-    }
-    @GetMapping("/alumini3")
-    public String showAlu(@RequestParam String name, Model model) {
-        List<Alumini> list=ser.getCompany(name);
-        model.addAttribute("all",list);
-        return "al1";
-    }
-    @GetMapping("/alumini1")
-    public String show(@RequestParam String name, Model model) {
-        List<Alumini> list=ser.getYear(name);
-        model.addAttribute("all",list);
-        return "al1";
-    }
+
     @GetMapping("/addAlu")
     public String getPage(@ModelAttribute("alumini") Alumini drive)
     {
@@ -50,7 +33,7 @@ public class AluminiCon {
         model.addAttribute("all",list);
         return "aluminiAd";
     }
-    @GetMapping("/allAlu")
+    @GetMapping("/alumini")
     public String getAll( Model model) {
 
         List<Alumini> list=ser.getAll();

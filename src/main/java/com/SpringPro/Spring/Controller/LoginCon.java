@@ -115,10 +115,6 @@ public class LoginCon {
     {
         return "talk";
     }
-    @GetMapping("/alumini")
-    public String goalumini()
-    {
-        return "alumini";
-    }
+
 
 }
